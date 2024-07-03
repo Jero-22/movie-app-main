@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movievox</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#FF0000">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FF0000">
+    <script src="db.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Movievox</a></h1>
+            <p>Explora las últimas películas y más</p>
+        </header>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar películas...">
+            <button id="searchButton">Buscar</button>
+            <button id="favoritesButton">Favoritos</button>
+        </div>
+        <div id="movieList" class="movie-list"></div>
+        <div id="favoritesList" class="movie-list" style="display: none;"></div>
+    </div>
+
+    <!-- Modal para detalles de la película -->
+    <div id="movieDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-details">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="details-item"><span class="details-label">Género:</span><span id="modalGenre" class="details-value"></span></div>
+                <div class="details-item"><span class="details-label">Año:</span><span id="modalYear" class="details-value"></span></div>
+                <div class="details-item"><span class="details-label">Director:</span><span id="modalDirector" class="details-value"></span></div>
+                <div class="details-item"><span class="details-label">Duración:</span><span id="modalDuration" class="details-value"></span></div>
+                <button id="toggleFavoriteButton" class="button-favorites">Agregar a Favoritos</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
